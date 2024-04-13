@@ -1,116 +1,105 @@
-import Header from './components/header'
-import React from 'react'
-import Footer from './components/Footer'
-import './App.css'
-import {Container, Carousel, Card, Row, Col, Button} from 'react-bootstrap'
-import CarouselImage from './components/carouselImage'
-import image1 from "./assets/carousel-1.png"
-import image2 from "./assets/carousel-2.jpg"
-import image3 from "./assets/carousel-3.jpg"
-import cardImage1 from "../src/assets/cardImage-1.jpg"
-import cardImage2 from "../src/assets/cardImage-2.jpg"
-import cardImage3 from "../src/assets/cardImage-3.jpeg"
-import jumbotron from "../src/assets/jumbotron-edit.jpg"
-import arrow from './assets/arrow.svg'
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import arrow from "./assets/arrow.svg";
+import cardImage1 from "./assets/cardImage-1.jpg";
+import cardImage2 from "./assets/cardImage-2.jpg";
+import cardImage3 from "./assets/cardImage-3.jpeg";
+import jumbotron from "./assets/jumbotron-edit.jpg";
+import { Card, Button } from "flowbite-react";
+import CarouselHome from "./components/CarouselHome";
+import "./App.css";
 
 function App() {
+	return (
+		<>
+			<div>
+				<Header />
+				<main>
+					<div>
+						<CarouselHome />
+					</div>
+					<div className="flex justify-center items-center mt-4">
+						<img src={arrow} alt="test" style={{ width: "80px" }} />
+					</div>
+					<h1 className="m-4 text-3xl text-center font-bold">FIND OUT MORE</h1>
 
-  return (
-    <>
-      <div>
-      <Header />
-      <main>
-        <Container className='py-2'>
-          {/* CAROUSEL PART */}
-          <Carousel>
-            <Carousel.Item interval={1000}>
-              <CarouselImage src={image1} alt="carousel-1" style={{filter: 'brightness(70%)'}}/>
-              <Carousel.Caption>
-                <h3>Node JS Back End</h3>
-                <p>Seamless, scalable, and efficient back-end solutions, tailored to elevate your digital presence.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item interval={1000}>
-              <CarouselImage src={image2} alt="carousel-2" />
-              <Carousel.Caption>
-                <h3>Golang Back End</h3>
-                <p>Explore high-performance, concurrent operations for a smarter, faster backend.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item interval={1000}>
-              <CarouselImage src={image3} alt="carousel-3" />
-              <Carousel.Caption>
-                <h3>Laravel Fullstack</h3>
-                <p>An all-in-one, robust framework providing an elegant, end-to-end solution for your digital ambitions.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
+					{/* CARD PART */}
+					<div className="flex py-20 my-8 justify-center gap-8 bg-neutral-800">
+						<Card
+							className="max-w-96 text-center bg-neutral-900 border-green-700"
+							imgAlt="cardImage1"
+							imgSrc={cardImage1}>
+							<h5 className="text-2xl font-bold tracking-tight text-white dark:text-white">
+								Portfolio
+							</h5>
+							<p className="font-normal text-white">
+								Some quick example text to build on the card title and make up
+								the bulk of the card&apos;s content.
+							</p>
+							<div className="flex justify-center">
+								<Button color="success" pill className="px-4">
+									Visit
+								</Button>
+							</div>
+						</Card>
+						<Card
+							className="max-w-96 text-center bg-neutral-900 border-green-700"
+							imgAlt="cardImage2"
+							imgSrc={cardImage2}>
+							<h5 className="text-2xl font-bold tracking-tight text-white dark:text-white">
+								About
+							</h5>
+							<p className="font-normal text-white">
+								Some quick example text to build on the card title and make up
+								the bulk of the card&apos;s content.
+							</p>
+							<div className="flex justify-center">
+								<Button color="success" pill className="px-4">
+									Visit
+								</Button>
+							</div>
+						</Card>
+						<Card
+							className="max-w-96 text-center bg-neutral-900 border-green-700"
+							imgAlt="cardImage3"
+							imgSrc={cardImage3}>
+							<h5 className="text-2xl font-bold tracking-tight text-white dark:text-white">
+								Contact
+							</h5>
+							<p className="font-normal text-white">
+								Sme quick example text to build on the card title and make up
+								the bulk of the card&apos;s content.
+							</p>
+							<div className="flex justify-center">
+								<Button color="success" pill className="px-4">
+									Visit
+								</Button>
+							</div>
+						</Card>
+					</div>
 
-          <Row className='d-flex justify-content-center align-items-center mt-4'>
-            <img src={arrow} alt="test" style={{width: '100px'}} />
-          </Row>
-
-          {/* CARD PART */}
-          <h1 className='p-4 text-center'>FIND OUT MORE</h1>
-          <Row className='p-4 m-2 d-flex justify-content-center'>
-            <Col className='d-flex justify-content-center'>
-              <Card className="text-center border-success" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={cardImage1} style={{objectFit: 'cover', height: '200px'}}/>
-                <Card.Body>
-                  <Card.Title>Portfolio</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="success" className='rounded-pill'>More Info</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col className='d-flex justify-content-center'>
-              <Card className="text-center border-success" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={cardImage2} style={{objectFit: 'cover', height: '200px'}}/>
-                <Card.Body>
-                  <Card.Title>About</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="success" className='rounded-pill'>More Info</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col className='d-flex justify-content-center'>
-              <Card className="text-center border-success" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={cardImage3} style={{objectFit: 'cover', height: '200px'}}/>
-                <Card.Body>
-                  <Card.Title>Contact</Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="success" className='rounded-pill'>More Info</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-          <Row>
-            
-          {/* CALL TO ACTION */}
-          </Row>
-          <Row className='p-4 m-4 d-flex justify-content-center align-items-center bg-success bg-opacity-50 rounded'>
-            <Col sm={7}>
-              <h1 className='fw-light'>Let's build captivating and engaging website. Bring your vision to life!</h1>
-            </Col>
-            <Col sm={5}>
-              <img src={jumbotron} alt="" style={{width: '400px'}}/>
-            </Col>
-          </Row>
-        </Container>
-      </main>
-      <Footer />
-    </div>
-    </>
-  )
+					<div className="bg-success rounded-lg grid grid-cols-3 m-12 p-8 items-center">
+						<div className="m-8 p-4 text-green-800 text-6xl col-span-2">
+							<p className="leading-tight">
+								Let&apos;s build captivating and engaging website. Bring your
+								vision to life!
+							</p>
+						</div>
+						<div className="text-white">
+							<img
+								className=""
+								src={jumbotron}
+								alt="dance"
+								style={{ width: "500px" }}
+							/>
+						</div>
+					</div>
+				</main>
+				<Footer />
+			</div>
+			<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+		</>
+	);
 }
 
-export default App
+export default App;

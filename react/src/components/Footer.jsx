@@ -1,22 +1,27 @@
-import React from "react"
-import { Nav } from "react-bootstrap"
+import { Link } from "react-router-dom";
 
 function Footer() {
-    return (
-        <footer>
-            <Nav className="bg-dark justify-content-center py-2" defaultActiveKey="/home" as="ul">
-                <Nav.Item as="li">
-                    <Nav.Link className="text-white text-decoration-underline" href="/home">Instagram</Nav.Link>
-                </Nav.Item>
-                <Nav.Item as="li">
-                    <Nav.Link className="text-white text-decoration-underline" eventKey="link-1">Whatsapp</Nav.Link>
-                </Nav.Item>
-                <Nav.Item as="li">
-                    <Nav.Link className="text-white text-decoration-underline" eventKey="link-2">Github</Nav.Link>
-                </Nav.Item>
-            </Nav>
-        </footer>
-    )
+	return (
+		<footer className="bg-neutral-800 py-2">
+			<div className="flex justify-center">
+				<Link
+					to="/home"
+					className="text-white mx-4 underline hover:no-underline">
+					Instagram
+				</Link>
+				<Link
+					to="/whatsapp"
+					className="text-white mx-4 underline hover:no-underline">
+					Whatsapp
+				</Link>
+				<Link
+					to="/github"
+					className="text-white mx-4 underline hover:no-underline">
+					Github
+				</Link>
+			</div>
+		</footer>
+	);
 }
 
 export default Footer;
