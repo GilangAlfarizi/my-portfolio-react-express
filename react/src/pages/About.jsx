@@ -7,6 +7,7 @@ import { RiPhoneFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import selfie2 from "../assets/about/selfie-2.png";
 import arrow from "../assets/arrow.svg";
+import { Card, Button } from "flowbite-react";
 
 export default function About() {
 	return (
@@ -53,68 +54,50 @@ export default function About() {
 					<h1 className="text-center text-white mt-8 pt-4 text-3xl font-bold">
 						C O N T A C T
 					</h1>
-					<div className="grid grid-cols-3 justify-center p-4 m-4 ">
-						<div className="flex justify-center">
-							<div
-								className="card bg-black text-center text-white border-green-700 border-1 p-2 mb-4"
-								style={{ width: "18rem" }}>
-								<AiFillInstagram
-									size={80}
-									className="text-lightgreen mx-auto m-4"
-								/>
-								<div className="card-body items-center p-2">
-									<p className="card-title">Instagram</p>
-									<p className="mx-4">
-										Get to know me from my personal Instagram.
-									</p>
-									<div className="card-actions">
-										<button className="btn btn-success rounded-full my-2">
-											Visit Site
-										</button>
-									</div>
-								</div>
+
+					<div className="flex py-4 my-8 justify-center gap-12">
+						<Card className="max-w-72 max-h-80 text-center bg-neutral-900 border-green-700">
+							<AiFillInstagram size={80} className="text-green-400 mx-auto" />
+							<h5 className="text-2xl font-bold tracking-tight text-white dark:text-white">
+								Instagram
+							</h5>
+							<p className="font-normal text-white">
+								Get to know me from my personal Instagram.
+							</p>
+							<div className="flex justify-center">
+								<Button color="success" pill className="px-4">
+									Visit
+								</Button>
 							</div>
-						</div>
-						<div className="flex justify-center">
-							<div
-								className="card bg-black text-center text-white border-green-700 border-1 p-2 mb-4"
-								style={{ width: "18rem" }}>
-								<IoLogoWhatsapp
-									size={80}
-									className="text-lightgreen mx-auto m-4"
-								/>
-								<div className="card-body items-center p-2">
-									<h5 className="card-title">Whatsapp</h5>
-									<p>Get in touch and contact my personal Whatsapp directly.</p>
-									<div className="card-actions">
-										<button className="btn btn-success rounded-full my-2">
-											Visit Site
-										</button>
-									</div>
-								</div>
+						</Card>
+						<Card className="max-w-72 max-h-80 text-center bg-neutral-900 border-green-700">
+							<IoLogoWhatsapp size={80} className="text-green-400 mx-auto" />
+							<h5 className="text-2xl font-bold tracking-tight text-white dark:text-white">
+								Whatsapp
+							</h5>
+							<p className="font-normal text-white">
+								Get in touch and contact my personal Whatsapp directly.
+							</p>
+							<div className="flex justify-center">
+								<Button color="success" pill className="px-4">
+									Visit
+								</Button>
 							</div>
-						</div>
-						<div className="flex justify-center">
-							<div
-								className="card bg-black text-center text-white border-green-700 border-1 p-2 mb-4"
-								style={{ width: "18rem" }}>
-								<AiFillGithub
-									size={80}
-									className="text-lightgreen mx-auto m-4"
-								/>
-								<div className="card-body items-center p-2 mx-6">
-									<h5 className="card-title">Github</h5>
-									<p>
-										Review my finished projects from my public repositories.
-									</p>
-									<div className="card-actions">
-										<button className="btn btn-success rounded-full my-2">
-											Visit Site
-										</button>
-									</div>
-								</div>
+						</Card>
+						<Card className="max-w-72 max-h-80 text-center bg-neutral-900 border-green-700">
+							<AiFillGithub size={80} className="text-green-400 mx-auto" />
+							<h5 className="text-2xl font-bold tracking-tight text-white dark:text-white">
+								Github
+							</h5>
+							<p className="font-normal text-white">
+								Review my finished projects from my public repositories.
+							</p>
+							<div className="flex justify-center">
+								<Button color="success" pill className="px-4">
+									Visit
+								</Button>
 							</div>
-						</div>
+						</Card>
 					</div>
 				</div>
 

@@ -1,12 +1,13 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Works() {
 	const [loading, setLoading] = useState(false);
 	const [projects, setProjects] = useState([]);
-	const [hoveredId, setHoveredId] = useState(null);
+	// const [hoveredId, setHoveredId] = useState(null);
 
 	async function fetchData() {
 		try {
@@ -36,44 +37,34 @@ export default function Works() {
 
 						{projects &&
 							projects.map((pro) => (
-								<div
-									key={pro.id}
-									className="mb-10 grid grid-cols-3 p-8 gap-10 border-2 border-success rounded-md"
-									style={{ cursor: "pointer" }} // Add cursor pointer
-									onMouseEnter={() => setHoveredId(pro.id)}
-									onMouseLeave={() => setHoveredId(null)}>
-									<div className="col-span-2 flex flex-col justify-between">
-										<div className="flex flex-col gap-6">
-											<h3
-												className="text-2xl"
-												style={{
-													fontWeight: hoveredId === pro.id ? "bold" : "normal",
-													transition: "font-weight",
-												}}>
-												{pro.title}
-											</h3>
-											<p className="text-gray-500">
-												{pro.description.length > 300
-													? pro.description.substring(0, 300) + "..."
-													: pro.description}
-											</p>
+								<Link key={pro.id} to={`/works/${pro.id}`}>
+									<div className="mb-10 grid grid-cols-3 p-8 gap-10 border-2 border-success rounded-md shadow-md hover:bg-green-100 ease-in-out duration-300">
+										<div className="col-span-2 flex flex-col justify-between">
+											<div className="flex flex-col gap-6">
+												<h3 className="text-2xl">{pro.title}</h3>
+												<p className="text-gray-500">
+													{pro.description.length > 300
+														? pro.description.substring(0, 280) + "..."
+														: pro.description}
+												</p>
+											</div>
+											<div className="border-2 h-1 bg-green-700 border-green-700/40 my-4" />
 										</div>
-										<div className="border-2 h-1 bg-green-700 border-green-700/40 my-4" />
+										<div>
+											{pro.Image.map((image) => (
+												<img
+													key={image.id}
+													src={image.image}
+													alt="project-thumbnail"
+													className="mb-3 rounded shadow-md shadow-zinc-700"
+													style={{
+														maxHeight: "200px",
+													}}
+												/>
+											))}
+										</div>
 									</div>
-									<div>
-										{pro.Image.map((image) => (
-											<img
-												key={image.id}
-												src={image.image}
-												alt="project-thumbnail"
-												className="mb-3 rounded shadow-md shadow-zinc-700"
-												style={{
-													maxHeight: "200px",
-												}}
-											/>
-										))}
-									</div>
-								</div>
+								</Link>
 							))}
 					</div>
 				</div>
