@@ -6,7 +6,7 @@ import CarouselImage from "./CarouselImage";
 
 function CarouselHome() {
 	return (
-		<div className="m-auto bg-neutral-900">
+		<div className="m-auto bg-neutral-900 text-center">
 			<Carousel slideInterval={5000}>
 				<CarouselImage src={image1} alt="carousel-1" style="max">
 					<p className="mb-8 text-lg">This is the description for slide 1.</p>
@@ -17,7 +17,7 @@ function CarouselHome() {
 				<CarouselImage src={image3} alt="carousel-3">
 					<p className="mb-8 text-lg">This is the description for slide 3.</p>
 				</CarouselImage>
-			</Carousel>
+			</Carousel>	
 		</div>
 	);
 }

@@ -16,7 +16,7 @@ export default function About() {
 
 			<div className="py-8 min-h-screen">
 				{/* LANDING */}
-				<div className="grid grid-cols-2 p-4">
+				<div className="grid lg:grid-cols-2 p-4">
 					<div className="mx-auto">
 						<img
 							className="border-2 border-green-700 rounded shadow"
@@ -25,10 +25,10 @@ export default function About() {
 							style={{ width: "350px" }}
 						/>
 					</div>
-					<div className="flex flex-col items-start">
-						<h1 className="text-4xl font-bold mb-4">Meet Gilang Alfarizi!</h1>
+					<div className="flex flex-col lg:items-start items-center text-center lg:text-start">
+						<h1 className="text-4xl font-bold my-4">Meet Gilang Alfarizi!</h1>
 						<div className="border-4 w-3/5 h-1 border-green-700/40 my-4"></div>
-						<p className="mt-4 mr-24">
+						<p className="mt-4 lg:mr-24 mx-11 lg:mx-0">
 							Gilang Alfarizi is an adept back-end web developer with a strong
 							foundation in utilizing Node.js, demonstrating a commendable level
 							of proficiency in this technology. His experience includes working
@@ -39,7 +39,7 @@ export default function About() {
 							efficient and scalable back-end solutions, showing promising
 							potential in Golang and Laravel Fullstack as well.
 						</p>
-						<div className="flex-end items-end justify-end mt-4">
+						<div className="mt-4">
 							<img
 								src={arrow}
 								alt=""
@@ -50,12 +50,12 @@ export default function About() {
 				</div>
 
 				{/* CONTACT */}
-				<div className="grid grid-cols-1 bg-zinc-800 my-4">
+				<div className="grid grid-cols-1 bg-zinc-800 my-4" id="contact">
 					<h1 className="text-center text-white mt-8 pt-4 text-3xl font-bold">
 						C O N T A C T
 					</h1>
 
-					<div className="flex py-4 my-8 justify-center gap-12">
+					<div className="flex lg:flex-row flex-col py-4 my-8 justify-center items-center gap-12">
 						<Card className="max-w-72 max-h-80 text-center bg-neutral-900 border-green-700">
 							<AiFillInstagram size={80} className="text-green-400 mx-auto" />
 							<h5 className="text-2xl font-bold tracking-tight text-white dark:text-white">
@@ -65,9 +65,14 @@ export default function About() {
 								Get to know me from my personal Instagram.
 							</p>
 							<div className="flex justify-center">
-								<Button color="success" pill className="px-4">
-									Visit
-								</Button>
+								<a
+									href="https://www.instagram.com/alfarizigilang/"
+									target="_blank"
+									rel="noopener noreferrer">
+									<Button color="success" pill className="px-4">
+										Visit
+									</Button>
+								</a>
 							</div>
 						</Card>
 						<Card className="max-w-72 max-h-80 text-center bg-neutral-900 border-green-700">
@@ -79,9 +84,14 @@ export default function About() {
 								Get in touch and contact my personal Whatsapp directly.
 							</p>
 							<div className="flex justify-center">
-								<Button color="success" pill className="px-4">
-									Visit
-								</Button>
+								<a
+									href="https://wa.me/+6287888760035"
+									target="_blank"
+									rel="noopener noreferrer">
+									<Button color="success" pill className="px-4">
+										Visit
+									</Button>
+								</a>
 							</div>
 						</Card>
 						<Card className="max-w-72 max-h-80 text-center bg-neutral-900 border-green-700">
@@ -93,16 +103,21 @@ export default function About() {
 								Review my finished projects from my public repositories.
 							</p>
 							<div className="flex justify-center">
-								<Button color="success" pill className="px-4">
-									Visit
-								</Button>
+								<a
+									href="https://github.com/GilangAlfarizi"
+									target="_blank"
+									rel="noopener noreferrer">
+									<Button color="success" pill className="px-4">
+										Visit
+									</Button>
+								</a>
 							</div>
 						</Card>
 					</div>
 				</div>
 
 				{/* OTHER INFORMATIONS */}
-				<div className="grid grid-cols-2">
+				<div className="grid lg:grid-cols-2">
 					<div className="ml-14 px-12">
 						<div className="flex items-center m-4">
 							<FaBirthdayCake className="mr-2" size={30} color="green" />
@@ -130,12 +145,10 @@ export default function About() {
 						</div>
 						<hr className="border-success mx-4 my-2" />
 					</div>
-					<div className="my-4">
-						<h1 className="text-4xl font-bold">My Address</h1>
+					<div className="my-4 flex flex-col items-center lg:items-start">
+						<h1 className="text-4xl font-bold mb-4">My Address</h1>
 						<iframe
-							className="mt-4"
-							width="600"
-							height="400"
+							className="w-full h-64 lg:w-[500px] lg:h-[300px] lg:px-0 px-10"
 							loading="lazy"
 							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.18887466292273!2d110.39411933811121!3d-7.05361928623373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708bfee13d614d%3A0xb5e32d15a50e439e!2sKos%20Shafa%20Putra!5e0!3m2!1sen!2sid!4v1699436090207!5m2!1sen!2sid"></iframe>
 					</div>

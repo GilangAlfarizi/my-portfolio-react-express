@@ -35,28 +35,26 @@ function WorkDetail() {
 							<h1>{projects.title}</h1>
 						</div>
 						<div className="p-4 grid grid-rows-2">
-							<div className="text-lg grid grid-cols-2 gap-8">
-								<div
-									className="flex justify-center items-center pr-8 max-h-100"
-									style={{ display: selectedImage ? "flex" : "none" }}>
+							<div className="text-lg grid grid-cols-2 gap-8 mb-12">
+								<div className="flex justify-center items-center pr-8 max-h-100">
 									<img
 										src={selectedImage}
 										alt="Selected"
-										className="max-w-3/4 max-h-3/4"
+										className="h-96 w-auto object-cover rounded-md shadow-md"
 									/>
 								</div>
 								<div className="my-auto">
 									<p>{projects.description}</p>
 								</div>
 							</div>
-							<div className="flex mt-12">
+							<div className="flex items-center overflow-x-scroll h-64 bg-green-100 rounded-md px-8 gap-4">
 								{projects.Image &&
 									projects.Image.map((image) => (
 										<img
 											key={image.id}
 											src={image.image}
 											alt={`Image ${image.id}`}
-											className="max-h-40 mr-2"
+											className="h-40 w-64 object-cover cursor-pointer shadow-md rounded-md hover:brightness-50 hover:duration-300 focus:animate-ping"
 											onClick={() => setSelectedImage(image.image)}
 										/>
 									))}
