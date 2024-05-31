@@ -28,14 +28,14 @@ function Header() {
 					Home
 				</Navbar.Link>
 				<Navbar.Link
-					href="http://localhost:5173/works"
+					href="/works"
 					className={`text-gray-400 text-lg lg:hover:text-white hover:bg-stone-900 mr-4 ${
 						activePage === "/works" ? "text-white" : ""
 					}`}>
 					Works
 				</Navbar.Link>
 				<Navbar.Link
-					href="http://localhost:5173/about"
+					href="/about"
 					className={`text-gray-400 text-lg lg:hover:text-white hover:bg-stone-900 mr-4 ${
 						activePage === "/about" ? "text-white" : ""
 					}`}>

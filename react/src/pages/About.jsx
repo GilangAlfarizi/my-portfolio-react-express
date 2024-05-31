@@ -26,9 +26,9 @@ export default function About() {
 						/>
 					</div>
 					<div className="flex flex-col lg:items-start items-center text-center lg:text-start">
-						<h1 className="text-4xl font-bold my-4">Meet Gilang Alfarizi!</h1>
-						<div className="border-4 w-3/5 h-1 border-green-700/40 my-4"></div>
-						<p className="mt-4 lg:mr-24 mx-11 lg:mx-0">
+						<h1 className="text-4xl font-bold my-8">Meet Gilang Alfarizi!</h1>
+						<div className="border-4 w-3/5 h-1 border-green-700/40 mb-4"></div>
+						<p className="mt-4 lg:mr-24 mx-11 lg:mx-0 text-start">
 							Gilang Alfarizi is an adept back-end web developer with a strong
 							foundation in utilizing Node.js, demonstrating a commendable level
 							of proficiency in this technology. His experience includes working

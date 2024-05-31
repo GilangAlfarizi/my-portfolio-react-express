@@ -38,7 +38,7 @@ function App() {
 								on.
 							</p>
 							<div className="flex justify-center">
-								<a href="http://localhost:5173/works">
+								<a href="/works">
 									<Button color="success" pill className="px-4">
 										Visit
 									</Button>
@@ -57,7 +57,7 @@ function App() {
 								background, my approach to work, and my interests.
 							</p>
 							<div className="flex justify-center">
-								<a href="http://localhost:5173/about">
+								<a href="/about">
 									<Button color="success" pill className="px-4">
 										Visit
 									</Button>
