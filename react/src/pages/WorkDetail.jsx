@@ -11,7 +11,9 @@ function WorkDetail() {
 
 	async function fetchData() {
 		try {
-			const result = await axios.get(`http://localhost:3000/api/project/${id}`);
+			const result = await axios.get(
+				`${import.meta.env.VITE_API_BASE_URL}/project/${id}`
+			);
 			setProjects(result.data.data);
 			if (result.data.data.Image.length > 0) {
 				setSelectedImage(result.data.data.Image[0].image);

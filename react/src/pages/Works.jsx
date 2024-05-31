@@ -12,7 +12,9 @@ export default function Works() {
 
 	async function fetchData() {
 		try {
-			const result = await axios.get("http://localhost:3000/api/project");
+			const result = await axios.get(
+				`${import.meta.env.VITE_API_BASE_URL}/project`
+			);
 			setProjects(result.data.data);
 		} catch (error) {
 			console.log(error);
@@ -30,7 +32,6 @@ export default function Works() {
 			projects.forEach((pro) => {
 				const description = pro.description;
 				if (window.innerWidth >= 1024) {
-					// lg breakpoint (1024px)
 					newDescriptions[pro.id] =
 						description.length > 300
 							? description.substring(0, 280) + "..."
@@ -84,32 +85,6 @@ export default function Works() {
 						{projects &&
 							projects.map((pro) => (
 								<Link key={pro.id} to={`/works/${pro.id}`}>
-									{/* <div className="mb-10 grid grid-cols-3 p-8 gap-10 border-2 border-success rounded-md shadow-md hover:bg-green-100 ease-in-out duration-300">
-										<div className="col-span-2 flex flex-col justify-between">
-											<div className="flex flex-col gap-6">
-												<h3 className="text-2xl">{pro.title}</h3>
-												<p className="text-gray-500">
-													{pro.description.length > 300
-														? pro.description.substring(0, 280) + "..."
-														: pro.description}
-												</p>
-											</div>
-											<div className="border-2 h-1 bg-green-700 border-green-700/40 my-4 rounded-lg" />
-										</div>
-										<div className="flex items-center justify-center">
-											{pro.Image.map((image) => (
-												<img
-													key={image.id}
-													src={image.image}
-													alt="project-thumbnail"
-													className="mb-3 rounded border-2 border-green-700"
-													style={{
-														maxHeight: "200px",
-													}}
-												/>
-											))}
-										</div>
-									</div> */}
 									<div className="mb-10 lg:p-8 p-6 gap-10 lg:grid lg:grid-cols-3 border-2 border-success rounded-md shadow-md hover:bg-green-100 ease-in-out duration-300">
 										<div className="col-span-2 flex flex-col justify-between">
 											<div className="flex flex-col lg:gap-6 gap-2">

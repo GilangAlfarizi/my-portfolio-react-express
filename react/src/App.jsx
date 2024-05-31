@@ -7,6 +7,7 @@ import cardImage3 from "./assets/cardImage-3.jpeg";
 import jumbotron from "./assets/jumbotron-edit.jpg";
 import { Card, Button } from "flowbite-react";
 import CarouselHome from "./components/CarouselHome";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -77,11 +78,13 @@ function App() {
 								people.
 							</p>
 							<div className="flex justify-center">
-								<a href="http://localhost:5173/about/#contact">
+								<Link to="about#contact">
+									{/* <a href="/about/#contact"> */}
 									<Button color="success" pill className="px-4">
 										Visit
 									</Button>
-								</a>
+									{/* </a> */}
+								</Link>
 							</div>
 						</Card>
 					</div>
