@@ -9,15 +9,28 @@ function CarouselHome() {
 		<div className="m-auto bg-neutral-900 text-center">
 			<Carousel slideInterval={5000}>
 				<CarouselImage src={image1} alt="carousel-1" style="max">
-					<p className="mb-8 text-lg">This is the description for slide 1.</p>
+					{/* <h3></h3> */}
+					<p className="mb-8 text-lg">
+						Node JS Back End <br />
+						Seamless, scalable, and efficient back-end solutions, tailored to
+						elevate your digital presence.
+					</p>
 				</CarouselImage>
 				<CarouselImage src={image2} alt="carousel-2">
-					<p className="mb-8 text-lg">This is the description for slide 2.</p>
+					<p className="mb-8 text-lg">
+						Golang Back End <br />
+						Explore high-performance, concurrent operations for a smarter,
+						faster backend.
+					</p>
 				</CarouselImage>
 				<CarouselImage src={image3} alt="carousel-3">
-					<p className="mb-8 text-lg">This is the description for slide 3.</p>
+					<p className="mb-8 text-lg">
+						Laravel Fullstack <br />
+						An all-in-one, robust framework providing an elegant, end-to-end
+						solution for your digital ambitions.
+					</p>
 				</CarouselImage>
-			</Carousel>	
+			</Carousel>
 		</div>
 	);
 }

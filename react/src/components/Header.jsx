@@ -19,24 +19,24 @@ function Header() {
 				</span>
 			</Navbar.Brand>
 			<Navbar.Toggle />
-			<Navbar.Collapse>
+			<Navbar.Collapse className="mr-4">
 				<Navbar.Link
 					href="/"
-					className={`text-gray-400 text-lg lg:hover:text-white hover:bg-stone-900 mr-4 ${
+					className={`text-gray-400 text-lg lg:hover:text-white hover:bg-stone-900 ${
 						activePage === "/" ? "text-white" : ""
 					}`}>
 					Home
 				</Navbar.Link>
 				<Navbar.Link
 					href="/works"
-					className={`text-gray-400 text-lg lg:hover:text-white hover:bg-stone-900 mr-4 ${
+					className={`text-gray-400 text-lg lg:hover:text-white hover:bg-stone-900 ${
 						activePage === "/works" ? "text-white" : ""
 					}`}>
 					Works
 				</Navbar.Link>
 				<Navbar.Link
 					href="/about"
-					className={`text-gray-400 text-lg lg:hover:text-white hover:bg-stone-900 mr-4 ${
+					className={`text-gray-400 text-lg lg:hover:text-white hover:bg-stone-900 ${
 						activePage === "/about" ? "text-white" : ""
 					}`}>
 					About

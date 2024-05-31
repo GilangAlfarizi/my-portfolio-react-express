@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { Button } from "flowbite-react";
+import { Button, Spinner } from "flowbite-react";
 
 export default function Works() {
 	const [loading, setLoading] = useState(false);
@@ -16,13 +16,14 @@ export default function Works() {
 				`${import.meta.env.VITE_API_BASE_URL}/project`
 			);
 			setProjects(result.data.data);
+			setLoading(false);
 		} catch (error) {
 			console.log(error);
 		}
 	}
 
 	useEffect(() => {
-		setLoading();
+		setLoading(true);
 		fetchData();
 	}, []);
 
@@ -79,9 +80,15 @@ export default function Works() {
 							</Button>
 						</div>
 					</div>
+					{loading && (
+						<Spinner
+							color="success"
+							aria-label="Success spinner example"
+							size="xl"
+							className="flex max-w-screen justify-center items-center align-middle mx-auto"
+						/>
+					)}
 					<div className="m-4 lg:m-10">
-						{loading && <p>loading...</p>}
-
 						{projects &&
 							projects.map((pro) => (
 								<Link key={pro.id} to={`/works/${pro.id}`}>

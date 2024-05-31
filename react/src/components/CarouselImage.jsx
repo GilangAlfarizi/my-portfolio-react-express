@@ -6,7 +6,7 @@ function CarouselImage(props) {
 			<img
 				src={src}
 				alt={alt}
-				style={{ filter: "brightness(70%)", maxHeight: "600px" }}
+				style={{ filter: "brightness(50%)", maxHeight: "600px" }}
 			/>
 			{children && (
 				<div className="absolute inset-0 flex flex-end items-end p-12  justify-center text-white">
