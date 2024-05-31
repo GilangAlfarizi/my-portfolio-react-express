@@ -11,21 +11,21 @@ function CarouselHome() {
 				<CarouselImage src={image1} alt="carousel-1" style="max">
 					{/* <h3></h3> */}
 					<p className="mb-8 text-lg">
-						Node JS Back End <br />
+						<b>Node JS Back End</b> <br />
 						Seamless, scalable, and efficient back-end solutions, tailored to
 						elevate your digital presence.
 					</p>
 				</CarouselImage>
 				<CarouselImage src={image2} alt="carousel-2">
 					<p className="mb-8 text-lg">
-						Golang Back End <br />
+						<b>Golang Back End</b> <br />
 						Explore high-performance, concurrent operations for a smarter,
 						faster backend.
 					</p>
 				</CarouselImage>
 				<CarouselImage src={image3} alt="carousel-3">
 					<p className="mb-8 text-lg">
-						Laravel Fullstack <br />
+						<b>Laravel Fullstack</b> <br />
 						An all-in-one, robust framework providing an elegant, end-to-end
 						solution for your digital ambitions.
 					</p>

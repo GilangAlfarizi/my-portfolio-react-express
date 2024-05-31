@@ -89,16 +89,16 @@ function App() {
 						</Card>
 					</div>
 
-					<div className="bg-success rounded-lg grid lg:grid-cols-3 m-12 p-8 items-center">
-						<div className="lg:mx-8 my-4 lg:px-4 lg:py-4 text-green-800 lg:text-6xl text-lg col-span-2">
+					<div className="bg-success rounded-lg lg:grid lg:grid-cols-3 m-12 p-8 items-center">
+						<div className="lg:mx-8 lg:my-4 lg:px-4 lg:py-4 text-green-800 lg:text-6xl text-lg col-span-2">
 							<p className="leading-tight">
 								Let&apos;s build captivating and engaging website. Bring your
 								vision to life!
 							</p>
 						</div>
-						<div className="text-white">
+						<div className="text-white mt-8 flex justify-center items-center text-center mx-auto">
 							<img
-								className="w-full lg:w-[500px]"
+								className="w-full justify-center lg:w-[500px]"
 								src={jumbotron}
 								alt="dance"
 							/>
