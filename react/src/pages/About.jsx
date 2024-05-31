@@ -118,7 +118,7 @@ export default function About() {
 
 				{/* OTHER INFORMATIONS */}
 				<div className="grid lg:grid-cols-2">
-					<div className="ml-14 px-12">
+					<div className="lg:ml-14 px-12">
 						<div className="flex items-center m-4">
 							<FaBirthdayCake className="mr-2" size={30} color="green" />
 							<span>Jakarta, 16 November 2002</span>

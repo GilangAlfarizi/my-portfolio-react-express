@@ -35,12 +35,12 @@ function WorkDetail() {
 							<h1>{projects.title}</h1>
 						</div>
 						<div className="p-4 grid grid-rows-2">
-							<div className="text-lg grid grid-cols-2 gap-8 mb-12">
-								<div className="flex justify-center items-center pr-8 max-h-100">
+							<div className="text-lg grid lg:grid-cols-2 gap-8 mb-12">
+								<div className="flex justify-center items-center lg:pr-8 max-h-100">
 									<img
 										src={selectedImage}
 										alt="Selected"
-										className="h-96 w-auto object-cover rounded-md shadow-md"
+										className="lg:h-96 w-auto object-cover rounded-md shadow-md "
 									/>
 								</div>
 								<div className="my-auto">
@@ -54,7 +54,7 @@ function WorkDetail() {
 											key={image.id}
 											src={image.image}
 											alt={`Image ${image.id}`}
-											className="h-40 w-64 object-cover cursor-pointer shadow-md rounded-md hover:brightness-50 hover:duration-300 focus:animate-ping"
+											className="h-40 w-64 object-cover cursor-pointer shadow-md rounded-md hover:brightness-50 hover:duration-300"
 											onClick={() => setSelectedImage(image.image)}
 										/>
 									))}
