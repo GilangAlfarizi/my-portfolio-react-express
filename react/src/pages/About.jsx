@@ -117,7 +117,7 @@ export default function About() {
 				</div>
 
 				{/* OTHER INFORMATIONS */}
-				<div className="grid lg:grid-cols-2">
+				<div className="grid lg:grid-cols-2 place-content-center">
 					<div className="lg:ml-14 px-12">
 						<div className="flex items-center m-4">
 							<FaBirthdayCake className="mr-2" size={30} color="green" />
@@ -145,8 +145,8 @@ export default function About() {
 						</div>
 						<hr className="border-success mx-4 my-2" />
 					</div>
-					<div className="my-4 flex flex-col items-center lg:items-start">
-						<h1 className="text-4xl font-bold mb-4">My Address</h1>
+					<div className="my-4 flex flex-col justify-center px-12">
+						<p className="text-4xl font-bold mb-4">My Address</p>
 						<iframe
 							className="w-full h-64 lg:w-[500px] lg:h-[300px] lg:px-0 px-10"
 							loading="lazy"

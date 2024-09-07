@@ -70,15 +70,22 @@ module.exports = {
 
 	getAll: async (req, res) => {
 		try {
+			const { search } = req.query;
+
 			const data = await project.findMany({
+				where: search
+					? { OR: [{ title: { contains: search, mode: "insensitive" } }] }
+					: {},
 				include: {
 					Image: {
-						// where: {id: 1},
 						select: {
 							id: true,
 							image: true,
 						},
 					},
+				},
+				orderBy: {
+					updatedAt: "desc", // Sort by updatedAt in descending order
 				},
 			});
 
@@ -87,7 +94,7 @@ module.exports = {
 				Image: item.Image.length > 0 ? [item.Image[0]] : [],
 			}));
 
-			return res.status(201).json({
+			return res.status(200).json({
 				data: modifiedData,
 			});
 		} catch (error) {

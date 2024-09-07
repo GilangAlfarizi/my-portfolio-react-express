@@ -8,22 +8,34 @@ import { Button, Spinner } from "flowbite-react";
 export default function Works() {
 	const [loading, setLoading] = useState(false);
 	const [projects, setProjects] = useState([]);
+	const [searchQuery, setSearchQuery] = useState("");
 	const [truncatedDescriptions, setTruncatedDescriptions] = useState({});
 
 	async function fetchData() {
 		try {
 			const result = await axios.get(
-				`${import.meta.env.VITE_API_BASE_URL}/project`
+				`${import.meta.env.VITE_API_BASE_URL}/project`,
+				{ params: { search: searchQuery } }
 			);
 			setProjects(result.data.data);
 			setLoading(false);
 		} catch (error) {
 			console.log(error);
+		} finally {
+			setLoading(false);
 		}
 	}
 
+	const handleSearchChange = (e) => {
+		setSearchQuery(e.target.value);
+	};
+
+	const handleSearchSubmit = (e) => {
+		e.preventDefault(); // Prevent the form from refreshing the page
+		fetchData(searchQuery); // Fetch data with the current search query
+	};
+
 	useEffect(() => {
-		setLoading(true);
 		fetchData();
 	}, []);
 
@@ -65,19 +77,13 @@ export default function Works() {
 						</h1>
 						<div className="flex lg:my-4 my-12 flex-row-reverse">
 							<a href="/">
-								<Button gradientDuoTone="greenToBlue" size="lg">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="24"
-										height="24"
-										viewBox="0 0 24 24"
-										style={{ fill: "#FFFFFF", marginRight: "6px" }}>
-										<g>
-											<polygon points="13.707 4.707 12.293 3.293 3.586 12 12.293 20.707 13.707 19.293 6.414 12 13.707 4.707" />
-											<polygon points="19.707 4.707 18.293 3.293 9.586 12 18.293 20.707 19.707 19.293 12.414 12 19.707 4.707" />
-										</g>
-									</svg>
-									<p>Return</p>
+								<Button
+									size="lg"
+									color="success"
+									pill
+									type="submit"
+									className="bg-green-500 text-white">
+									Return
 								</Button>
 							</a>
 						</div>
@@ -91,6 +97,24 @@ export default function Works() {
 						/>
 					)}
 					<div className="m-4 lg:m-10">
+						<form
+							onSubmit={handleSearchSubmit}
+							className="flex flex-wrap gap-4 align-middle items-center">
+							<input
+								type="text"
+								value={searchQuery}
+								onChange={handleSearchChange}
+								placeholder="Search projects..."
+								className="my-4 p-2 border rounded-lg"
+							/>
+							<Button
+								color="success"
+								pill
+								type="submit"
+								className="bg-green-500 text-white">
+								Search
+							</Button>
+						</form>
 						{projects &&
 							projects.map((pro) => (
 								<Link key={pro.id} to={`/works/${pro.id}`}>
