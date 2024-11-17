@@ -37,6 +37,7 @@ export default function Works() {
 
 	useEffect(() => {
 		fetchData();
+		setLoading(true);
 	}, []);
 
 	useEffect(() => {
@@ -68,7 +69,7 @@ export default function Works() {
 	return (
 		<div>
 			<Header />
-			<main>
+			<main className="min-h-screen">
 				<div className="container grid grid-rows-1 m-auto p-10">
 					{/* PROJECTS */}
 					<div className="grid grid-cols-2 items-center">
@@ -88,18 +89,10 @@ export default function Works() {
 							</a>
 						</div>
 					</div>
-					{loading && (
-						<Spinner
-							color="success"
-							aria-label="Success spinner example"
-							size="xl"
-							className="flex max-w-screen justify-center items-center align-middle mx-auto"
-						/>
-					)}
 					<div className="m-4 lg:m-10">
 						<form
 							onSubmit={handleSearchSubmit}
-							className="flex flex-wrap gap-4 align-middle items-center">
+							className="flex lg:flex-wrap gap-4 align-middle items-center">
 							<input
 								type="text"
 								value={searchQuery}
@@ -115,10 +108,18 @@ export default function Works() {
 								Search
 							</Button>
 						</form>
+						{loading && (
+							<Spinner
+								color="success"
+								aria-label="Success spinner example"
+								size="xl"
+								className="flex max-w-screen justify-center items-center align-middle mx-auto lg:mt-20 mt-8"
+							/>
+						)}
 						{projects &&
 							projects.map((pro) => (
 								<Link key={pro.id} to={`/works/${pro.id}`}>
-									<div className="mb-10 lg:p-8 p-6 gap-10 lg:grid lg:grid-cols-3 border-2 border-success rounded-md shadow-md hover:bg-green-100 ease-in-out duration-300">
+									<div className="mt-8 mb-10 lg:p-8 p-6 gap-10 lg:grid lg:grid-cols-3 border-2 border-success rounded-md shadow-md hover:bg-green-100 ease-in-out duration-300">
 										<div className="col-span-2 flex flex-col justify-between">
 											<div className="flex flex-col lg:gap-6 gap-2">
 												<h3 className="text-2xl">{pro.title}</h3>

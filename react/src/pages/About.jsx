@@ -39,10 +39,10 @@ export default function About() {
 							efficient and scalable back-end solutions, showing promising
 							potential in Golang and Laravel Fullstack as well.
 						</p>
-						<div className="mt-4">
+						<div className="lg:mt-8 mt-4">
 							<img
 								src={arrow}
-								alt=""
+								alt="arrow"
 								style={{ width: "100px", opacity: "30%" }}
 							/>
 						</div>

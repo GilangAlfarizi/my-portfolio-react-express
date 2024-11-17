@@ -40,7 +40,7 @@ function WorkDetail() {
 						color="success"
 						aria-label="Success spinner example"
 						size="xl"
-						className="flex max-w-screen justify-center items-center align-middle mx-auto"
+						className="flex max-w-screen justify-center items-center align-middle mx-auto lg:mt-20 mt-8"
 					/>
 				) : (
 					projects && (
@@ -48,7 +48,7 @@ function WorkDetail() {
 							<div className="text-center m-8 text-4xl font-bold">
 								<h1>{projects.title}</h1>
 							</div>
-							<div className="p-4 grid grid-rows-2">
+							<div className="p-4">
 								<div className="text-lg grid lg:grid-cols-2 gap-8 mb-12">
 									<div className="flex justify-center items-center lg:pr-8 max-h-100">
 										<img
