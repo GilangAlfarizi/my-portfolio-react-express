@@ -16,13 +16,14 @@ function WorkDetail() {
 			const result = await axios.get(
 				`${import.meta.env.VITE_API_BASE_URL}/project/${id}`
 			);
-			setProjects(result.data.data);
-			if (result.data.data.Image.length > 0) {
-				setSelectedImage(result.data.data.Image[0].image);
+			setProjects(result.data);
+			if (result.data.Image.length > 0) {
+				setSelectedImage(result.data.Image[0].image);
 			}
-			setLoading(false);
 		} catch (error) {
 			console.log(error);
+		} finally {
+			setLoading(false);
 		}
 	}
 
