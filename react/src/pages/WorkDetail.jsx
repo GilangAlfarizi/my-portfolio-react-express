@@ -7,28 +7,29 @@ import { Spinner } from "flowbite-react";
 
 function WorkDetail() {
 	const { id } = useParams();
-	const [projects, setProjects] = useState([]);
+	const [projects, setProjects] = useState();
 	const [selectedImage, setSelectedImage] = useState(null);
 	const [loading, setLoading] = useState(false);
 
 	async function fetchData() {
+		setLoading(true);
 		try {
 			const result = await axios.get(
 				`${import.meta.env.VITE_API_BASE_URL}/project/${id}`
 			);
-			setProjects(result.data);
-			if (result.data.Image.length > 0) {
-				setSelectedImage(result.data.Image[0].image);
+			if (result) {
+				setProjects(result.data);
+				if (result.data.Image.length > 0) {
+					setSelectedImage(result.data.Image[0].image);
+				}
+				setLoading(false);
 			}
 		} catch (error) {
 			console.log(error);
-		} finally {
-			setLoading(false);
 		}
 	}
 
 	useEffect(() => {
-		setLoading(true);
 		fetchData();
 	}, [id]);
 
