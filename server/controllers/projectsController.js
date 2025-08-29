@@ -1,5 +1,5 @@
 const { project } = require("../models");
-const redisClient = require("../config/redisConfig");
+// const redisClient = require("../config/redisConfig");
 
 module.exports = {
 	create: async (req, res) => {
@@ -46,10 +46,10 @@ module.exports = {
 	getId: async (req, res) => {
 		const projectId = req.params.id;
 		try {
-			const cachedData = await redisClient.get(`project:${projectId}`);
-			if (cachedData) {
-				return res.status(200).json(JSON.parse(cachedData));
-			}
+			// const cachedData = await redisClient.get(`project:${projectId}`);
+			// if (cachedData) {
+			// 	return res.status(200).json(JSON.parse(cachedData));
+			// }
 
 			const data = await project.findUnique({
 				where: {
@@ -65,11 +65,11 @@ module.exports = {
 				},
 			});
 
-			await redisClient.setEx(
-				`project:${projectId}`,
-				3600,
-				JSON.stringify(data)
-			);
+			// await redisClient.setEx(
+			// 	`project:${projectId}`,
+			// 	3600,
+			// 	JSON.stringify(data)
+			// );
 
 			return res.status(200).json({
 				data,
@@ -86,11 +86,11 @@ module.exports = {
 			const { search } = req.query;
 
 			// Generate a unique cache key
-			const cacheKey = search ? `projects:search:${search}` : `projects`;
-			const cachedData = await redisClient.get(cacheKey);
-			if (cachedData) {
-				return res.status(200).json(JSON.parse(cachedData));
-			}
+			// const cacheKey = search ? `projects:search:${search}` : `projects`;
+			// const cachedData = await redisClient.get(cacheKey);
+			// if (cachedData) {
+			// 	return res.status(200).json(JSON.parse(cachedData));
+			// }
 
 			const data = await project.findMany({
 				where: search
@@ -114,13 +114,13 @@ module.exports = {
 				Image: item.Image.length > 0 ? [item.Image[0]] : [],
 			}));
 
-			await redisClient.setEx(
-				cacheKey,
-				3600,
-				JSON.stringify({
-					data: modifiedData,
-				})
-			);
+			// await redisClient.setEx(
+			// 	cacheKey,
+			// 	3600,
+			// 	JSON.stringify({
+			// 		data: modifiedData,
+			// 	})
+			// );
 
 			return res.status(200).json({
 				data: modifiedData,
