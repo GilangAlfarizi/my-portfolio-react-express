@@ -95,7 +95,7 @@ function App() {
 								Contact
 							</h5>
 							<p className="font-normal text-white">
-								Feel free to reach out to me through my social media platforms
+								Feel free to reach me from my social media platforms
 								or contact form. I&apos;m always interested in hearing from new
 								people.
 							</p>

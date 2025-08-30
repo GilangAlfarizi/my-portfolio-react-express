@@ -29,9 +29,9 @@ export default function About() {
 						<h1 className="text-4xl font-bold my-8">Meet Gilang Alfarizi!</h1>
 						<div className="border-4 w-3/5 h-1 border-green-700/40 mb-4"></div>
 						<p className="mt-4 lg:mr-24 mx-11 lg:mx-0 text-start">
-							Gilang Alfarizi is an adept back-end web developer with a strong
-							foundation in utilizing Node.js, demonstrating a commendable level
-							of proficiency in this technology. His experience includes working
+							An adept back-end web developer with a strong foundation in
+							utilizing Node.js, demonstrating a commendable level of
+							proficiency in this technology. His experience includes working
 							with Golang and Laravel Fullstack, where he showcases a competent
 							understanding, particularly in Golang and Laravel Fullstack,
 							altough in a relatively early stage. With a primary focus on
@@ -150,7 +150,8 @@ export default function About() {
 						<iframe
 							className="w-full h-64 lg:w-[500px] lg:h-[300px] lg:px-0 px-10"
 							loading="lazy"
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.18887466292273!2d110.39411933811121!3d-7.05361928623373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708bfee13d614d%3A0xb5e32d15a50e439e!2sKos%20Shafa%20Putra!5e0!3m2!1sen!2sid!4v1699436090207!5m2!1sen!2sid"></iframe>
+							// src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d376.18887466292273!2d110.39411933811121!3d-7.05361928623373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708bfee13d614d%3A0xb5e32d15a50e439e!2sKos%20Shafa%20Putra!5e0!3m2!1sen!2sid!4v1699436090207!5m2!1sen!2sid">
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.92301134833116!2d106.64645954648087!3d-6.16179363756052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f8c75680b0e5%3A0x6881634d636bd7ad!2sGg.%20Masjid%20Al-Barkah%20No.45%2C%20RT.003%2FRW.002%2C%20Karang%20Anyar%2C%20Kec.%20Neglasari%2C%20Kota%20Tangerang%2C%20Banten%2015121!5e0!3m2!1sen!2sid!4v1756455616837!5m2!1sen!2sid"></iframe>
 					</div>
 				</div>
 			</div>
