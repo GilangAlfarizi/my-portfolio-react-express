@@ -39,15 +39,6 @@ export default function About() {
 							using React, Bootstrap, and Tailwind CSS. I have a solid
 							foundation in PHP Laravel, including implementing authentication
 							systems and using Blade views.
-							{/* An adept back-end web developer with a strong foundation in
-							utilizing Node.js, demonstrating a commendable level of
-							proficiency in this technology. His experience includes working
-							with Golang and Laravel Fullstack, where he showcases a competent
-							understanding, particularly in Golang and Laravel Fullstack,
-							altough in a relatively early stage. With a primary focus on
-							Node.js, Gilang brings robust skills and expertise in crafting
-							efficient and scalable back-end solutions, showing promising
-							potential in Golang and Laravel Fullstack as well. */}
 						</p>
 						<div className="lg:mt-8 mt-4">
 							<img
