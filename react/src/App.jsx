@@ -114,7 +114,7 @@ function App() {
 					<div className="bg-success rounded-lg lg:grid lg:grid-cols-3 m-12 p-8 items-center">
 						<div className="lg:mx-8 lg:my-4 lg:px-4 lg:py-4 text-green-800 lg:text-6xl text-lg col-span-2">
 							<p className="leading-tight">
-								Let&apos;s build captivating and engaging website. Bring your
+								Let&apos;s build captivating and engaging application. Bring your
 								vision to life!
 							</p>
 						</div>

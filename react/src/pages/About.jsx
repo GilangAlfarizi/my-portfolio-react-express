@@ -29,7 +29,17 @@ export default function About() {
 						<h1 className="text-4xl font-bold my-8">Meet Gilang Alfarizi!</h1>
 						<div className="border-4 w-3/5 h-1 border-green-700/40 mb-4"></div>
 						<p className="mt-4 lg:mr-24 mx-11 lg:mx-0 text-start">
-							An adept back-end web developer with a strong foundation in
+							I am a versatile web developer with a strong focus on backend
+							systems. My primary expertise lies in JavaScript and TypeScript
+							using NestJS and Express. I also have hands-on experience in
+							Golang development, leveraging Gin and GORM for efficient data
+							management. I am comfortable with a range of databases like MySQL,
+							PostgreSQL, and MongoDB. For frontend development, my skills
+							include HTML, CSS, and JavaScript, along with practical experience
+							using React, Bootstrap, and Tailwind CSS. I have a solid
+							foundation in PHP Laravel, including implementing authentication
+							systems and using Blade views.
+							{/* An adept back-end web developer with a strong foundation in
 							utilizing Node.js, demonstrating a commendable level of
 							proficiency in this technology. His experience includes working
 							with Golang and Laravel Fullstack, where he showcases a competent
@@ -37,7 +47,7 @@ export default function About() {
 							altough in a relatively early stage. With a primary focus on
 							Node.js, Gilang brings robust skills and expertise in crafting
 							efficient and scalable back-end solutions, showing promising
-							potential in Golang and Laravel Fullstack as well.
+							potential in Golang and Laravel Fullstack as well. */}
 						</p>
 						<div className="lg:mt-8 mt-4">
 							<img
