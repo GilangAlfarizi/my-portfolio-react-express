@@ -17,3 +17,14 @@
 // })();
 
 // module.exports = redisClient;
+
+const { Redis } = require("@upstash/redis");
+
+const redisClient = new Redis({
+	url: process.env.REDIS_URL,
+	token: process.env.REDIS_TOKEN,
+});
+
+console.log("Connected to Upstash Redis (HTTP REST mode)");
+
+module.exports = redisClient;
